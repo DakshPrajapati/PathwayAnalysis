@@ -6,7 +6,7 @@ from adjustText import adjust_text
 from scipy.interpolate import splrep, splev
 
 # Set limit and index for pathways
-limit = 2.1
+limit = 1.8
 
 # Load pathway data
 temp = pd.read_csv("C:/coop/pythonScripts/pathwayData.csv")
@@ -53,7 +53,7 @@ for gene_phos, group in temp[temp['density_cluster'] == "High"].groupby('Gene_Ph
     texts.append(plt.text(last_x, last_y, gene_phos, color="purple"))
 
 # Set labels and titles
-plt.title("Mus musculus: PI3K/AKT activation")  
+plt.title("Mus musculus: PIP3 activates AKT signaling")  
 plt.xlabel("Cell Cycle Phase")
 plt.ylabel("Standardized Profile")
 plt.xticks(list(custom_labels.keys()), list(custom_labels.values()))
